@@ -1,27 +1,22 @@
 
-
+const h1 = document.querySelector('h1');
 const userWord = prompt(`inserisci una parola per scoprire se è palindroma`);
 
-const arrayWord = userWord.split('')
+const arrayWord = userWord.split('');
+console.log(arrayWord);
 
 
+h1.innerHTML = checkPalindromWord(arrayWord);
 
 
-if (polindromeCheck(arrayWord, reversedWord) ){
-  const message = 'bravo' 
-}else {
-  const message = 'non bravo';
-  console.log(message); 
-};
+function checkPalindromWord(arrWord) {
+  const arrReversed = arrayWord.reverse('').join('');
+  const arrConfront = arrayWord.reverse('').join('');
+
   
-for (let i = arrayWord.length - 1; i >= 0; i-- ){
- const reversedWord = arrayWord[i]; 
-}
 
-function polindromeCheck(word, reverse) {
+  const result = arrReversed === arrConfront ? 'bravo' : 'non bravo';
+  
 
-if (word === reverse) {
-  const word = true;
-  ('bravo')
-  }
+  return result
 }
