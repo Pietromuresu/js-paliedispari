@@ -15,7 +15,7 @@ function checkPalindromWord(arrWord) {
 
   
 
-  const result = arrReversed === arrConfront ? 'bravo' : 'non bravo';
+  const result = arrReversed.toLocaleLowerCase() === arrConfront.toLowerCase() ? 'bravo' : 'non bravo';
   
 
   return result
